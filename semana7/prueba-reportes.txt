@@ -1,0 +1,5 @@
+Al consultar la ruta GET /reportes después de haber registrado reportes mediante POST, el servidor devuelve un arreglo JSON con todos los reportes almacenados en memoria.
+
+En mi prueba, primero registré un reporte de tipo "Infraestructura" y luego consulté GET /reportes, obteniendo el reporte con id: 1. Luego registré un segundo reporte de tipo "Ambiente" y al consultar nuevamente, obtuve ambos reportes con ids: 1 y 2.
+
+El servidor mantiene los datos en memoria mientras está ejecutándose. Si el servidor se detiene, los datos se pierden porque no hay base de datos.
